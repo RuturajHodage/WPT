@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="C:\Users\IET\Desktop\class files\classwork\WPT\DAY7\jquery-3.6.4.min.js"></script>
+    <script>
+         $(document).ready(function(){
+
+            $("#b1").click(()=>{
+               let x=$("#i1").data("mylines")
+               let str=$("#i1").text()
+               let finalstr=""
+               let length=str.length
+               let a=0;
+               let b=length/x;
+                 
+               for(let i=0;i<x;i++)
+               {
+                let part=str.slice(a,b)
+                finalstr=finalstr.concat(part+"<br>")
+                a=b
+                b=b+length/x 
+               }
+              $("#p1").html(finalstr)
+            })
+
+            $("#b1").click(()=>{
+                let y=$("#i1").data("mylines")
+                $("#i1").data("mylines",y+1)
+            })
+         })
+    </script>
+</head>
+<body>
+    <p id="i1" data-mylines="2">this is some data which I want to split and divide in many lines this is a huge text . It is important to revise the concepts. regular revision is compulsary for winners.<p>
+    <button id="b1">INCREMENT LINES</button>
+    <p id="p1"></p>
+</body>
+</html>
+
+

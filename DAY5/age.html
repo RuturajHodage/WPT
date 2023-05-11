@@ -1,0 +1,25 @@
+<html>
+    <center>
+    <head>
+        <title>AGE</title>
+        <h1>AGE</h1>
+    </head>
+    <script>
+          function f1()
+          {
+            let d=document.getElementById("i1").value
+            let d1= new Date()
+            let mybday=new Date(d)
+            let age=document.getElementById("p1")
+            age.innerText=d1.getFullYear()-mybday.getFullYear()
+          }
+    </script> 
+
+    <div>
+       <input type="date" id="i1"/>
+       <p id="p1"></p>
+       <button onclick="f1()">AGE</button>
+
+    </div>
+    </center>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script>
+        function f1()
+        {
+            let e=document.getElementById("i1")
+            let v=e.value
+            let c=document.getElementById("p1")
+            c.innerText=v.toUpperCase()
+
+        }
+        function f2()
+        {
+            let e=document.getElementById("i1")
+            let v=e.value
+            let c=document.getElementById("p1")
+            c.innerText=v.toLowerCase()
+        }
+        function f3()
+        {
+            let e=document.getElementById("i1")
+            let v=e.value
+            let c=document.getElementById("p1")
+            c.innerText=v.charAt(0).toUpperCase()+v.substr(1).toLowerCase()
+        }
+        
+        </script>
+    </head>
+    <body>
+        <pre>
+         enter a string:<input type="text" value="enter" id="i1"/>
+         <p id=p1></p>
+        </pre>
+        <div>
+         <button onclick="f1()">UPPER CASE</button>
+         <button onclick="f2()">LOWER CASE</button>
+         <button onclick="f3()">TITLE CASE</button>
+        </div>
+        
+    </body>
+</html>

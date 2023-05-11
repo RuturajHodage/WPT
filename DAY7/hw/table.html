@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./jquery-3.6.4.min.js"></script>
+  <script>
+           $().ready(()=>{
+                
+              $("#b1").click(()=>{
+                let n=$("#i1").val()
+                
+                for(let i=1;i<=5;i++){
+                    $("#t1").append(`<tr><td> value=${n}*${i}</td></tr> `)
+                    $("#t2").append(`<tr><td> value=${n*i}</td></tr>`)
+                }
+              })
+
+              $("#b2").click(()=>{
+                $("#t1").text(" ")
+                $("#t2").text(" ")
+              })
+           })
+ </script>
+</head>
+<body>
+    <table border="2" id="t3">
+        <tbody>
+        <tr>
+            <input type="number" id="i1"/>
+            <button id="b1">SHOW TABLE</button>
+            <button id="b2">CLEAR TABLE</button>
+            
+            <td id="t1" style="border:4px ;color:coral">Table</td>
+            <td id="t2" style="border:4px;color:coral">Result</td>
+
+        </tr>
+        </tbody>  
+     </table>   
+</body>
+</html>

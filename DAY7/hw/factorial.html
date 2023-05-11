@@ -1,0 +1,28 @@
+<html>
+    <head>
+       <script src="/DAY7/jquery-3.6.4.min.js"></script>
+        <script>
+            $().ready(()=>{
+                
+               $("#b1").click(()=>{
+                let n=$("#i1").val()
+                var fact=1;
+
+                   for(let i=n;i>1;i--)
+                   {
+                    fact=fact*i;
+                   }
+                   $("#p1").text(fact)            
+               }) 
+               
+               
+                
+            })
+        </script>
+    </head>
+    <body>
+         <p id="p1"></p>
+         <input type="number" id="i1" />
+         <button id="b1">FACTORIAL</button>
+    </body>
+    </html>

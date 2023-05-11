@@ -1,0 +1,84 @@
+<html>
+    <div id="id1">
+    <center>
+        <head> 
+        <h1>ARRAYS</h1>
+        </head>
+       
+             
+    
+        <style>
+            div{
+                border-style:groove;
+                border-width:5px;
+                background-color:aquamarine;
+               
+            }
+            
+  
+       </style>
+        <script>
+
+           var arr=[10,20,30,40,50]
+            
+           function check()
+           {
+               var num = document.getElementById("i1").value
+               console.log(num)
+              var v= arr.indexOf(parseInt(num))
+            //    console.log(arr.indexOf(parseInt(num))
+               if(v<0){
+                   document.getElementById("p1").innerText="NOT FOUND"
+               }
+               else{
+                   document.getElementById("p1").innerText=`found at index ${v}`  
+               }
+             
+           }
+
+           function insert()
+           {
+               let num = document.getElementById("i1").value
+               arr.push(num)
+               document.getElementById("p1").innerHTML=`<h4>${arr}</h4>`
+           }
+
+           function atIndex()
+           {
+               let num=document.getElementById("i1").value
+               let index=document.getElementById("i2").value
+
+               arr.splice(index,0,num)
+               document.getElementById("p1").innerHTML=`<h4>${arr}</h4>`
+           }
+           function remove_at_index()
+           {
+               let num=document.getElementById("i1").value
+               let index=document.getElementById("i3").value
+               arr.splice(index,1)
+               document.getElementById("p1").innerHTML=`<h4>${arr}</h4>`
+           }
+           
+        </script>
+   
+    <body>
+        <div>
+        DATA:<input type="text" id="i1" placeholder="Enter element"/>
+        INSERT_POSITION:<input type="number" id="i2"placeholder="Enter index"/>
+        delete_POSITION:<input type="number" id="i3"placeholder="Enter index"/>
+         
+        <pre>
+        <p id="p1"></p>
+        <button onclick="check()">SEARCH</button>
+        
+        <button onclick="insert()">INSERT AT END</button>
+        
+        <button onclick="atIndex()">INSERT AT INDEX</button>
+        
+        <button onclick="remove_at_index()">REMOVE</button>
+        </pre>   
+    </div>
+    </center>
+    </body>
+</div >
+</html>

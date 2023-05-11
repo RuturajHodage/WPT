@@ -1,0 +1,62 @@
+<html>
+    <center>
+    
+    <head>
+        <title>DAY CONVERTOR</title>
+       <h1 text align="center">DATE TO DAY</h1> 
+    </head>
+    <style>
+        p{
+            
+            border-style:groove;
+            border-color:black;
+            width:fit-content;
+
+        }
+    </style>
+    
+         <script>
+             function f1()
+             {
+               let d=document.getElementById("i1").value
+               let mydate=new Date(d)
+               let c=document.getElementById("p1")
+            // console.log(mydate.getDay())
+               switch(mydate.getDay())
+               {
+                   case 0:
+                         c.innerText="DAY is sunday"
+                        break;
+                   case 1:
+                         c.innerText="DAY is monday"
+                        break;
+                   case 2:
+                         c.innerText="DAY is tuesday"
+                        break;
+                   case 3:
+                         c.innerText="DAY is wednesday"
+                        break;
+                   case 4:
+                         c.innerText="DAY is thursday"
+                        break;
+                   case 5:
+                         c.innerText="DAY is friday"
+                        break;
+                   case 6:
+                         c.innerText="DAY is saturday"
+                        break;     
+               }
+             }
+             
+
+
+         </script> 
+     <body>
+         <div>
+             <input type="date" id="i1"/>
+             <p id="p1"></p>
+             <button onclick="f1()">GET DAY</button>
+         </div>      
+    </body>
+    </center>
+</html>

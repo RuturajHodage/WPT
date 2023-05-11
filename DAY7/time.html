@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="C:\Users\IET\Desktop\class files\classwork\WPT\DAY7\jquery-3.6.4.min.js"></script>
+    <script>
+           $().ready(function(){
+            
+            $("#b1").click(()=>{
+                let d =new Date()
+                let time=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()
+                $("#i1").val(time)
+            })
+
+           })       
+    </script>
+</head>
+<body>
+    <button id="b1">SHOW</button>
+    <input type="text" id="i1">
+</body>
+</html>

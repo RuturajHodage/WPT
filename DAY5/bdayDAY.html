@@ -1,0 +1,30 @@
+<html>
+    <center>
+    <head>
+        <title>Bday DAY</title>
+        <h1>Bday DAY</h1>
+    </head>
+    <script>
+          function f1()
+          {
+            let d=document.getElementById("i1").value
+            let d1= new Date().getFullYear()
+            let mybdayDate=new Date(d).getDate()
+            let mybdaymonth=new Date(d).getMonth()+1
+            let day=document.getElementById("p1")
+
+            let newDate=
+            day.innerText=mybdaymonth
+
+          }
+
+    </script> 
+
+    <div>
+       <input type="date" id="i1"/>
+       <p id="p1"></p>
+       <button onclick="f1()">GET DAY</button>
+
+    </div>
+    </center>
+</html>

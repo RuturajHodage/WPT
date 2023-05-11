@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/DAY7/jquery-3.6.4.min.js"></script>
+    <script>
+           $(document).ready(function(){
+               
+            $("#i2").click(()=>{
+                 $("#p1").text("hello")
+            })
+
+            $("#i3").click(()=>{
+               $("#p1").html("<i>hello</i>")
+            })
+
+            $("#i4").click(()=>{
+                $("#p1").html("<u>hello</u>")
+            })
+           })
+    </script>
+</head>
+<body>
+
+    <p id="p1"></p>
+    <!-- <input type="text" id="i1"/> -->
+    <input type="button" id="i2" value="SHOW"/>
+    <input type="button" id="i3" value="ITALIC"/>
+    <input type="button" id="i4" value="UNDERLINE">
+    
+</body>
+</html>
